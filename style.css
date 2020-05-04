@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  counter-reset: cover_control_counter;
+}
+
+.page {
+  min-height: 1800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contain {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* header and navigation */
+.header {
+  background-color: #0b0b0b;
+  height: 75px;
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+
+.logo {
+  display: block;
+  height: 22px;
+  width: auto;
+  position: relative;
+  top: -6px;
+}
+
+.header_group {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu_header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu_header li {
+  display: inline;
+}
+
+.menu_header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: white;
+  margin: 0 5px;
+}
+
+.menu_vehicles {
+  margin-right: auto;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.menu_about {
+ font-weight: 600;
+ font-size: 11px;
+}
+
+.menu_about a {
+  color: #8b939b;
+}
+
+/* cover and carousel */
+.cover {
+  background-image: url('asset/cover_dragon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+.cover_group {
+  margin-top: auto;
+}
+
+.cover_lead {
+  background-color: rgba(24,28,31,0.8);
+}
+
+.cover_lead .contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+}
+
+.cover_title a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cover_cta {
+  background-color: white;
+  border-radius: 2px;
+  padding: 12px 8px;
+  min-width: 180px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3a3a3a;
+  text-transform: uppercase;
+}
+
+.cover_cta span {
+  position: relative;
+  top: 2px;
+}
+
+.cover_control {
+  background-color: #21272b;
+}
+
+.cover_control_list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cover_control_list li {
+  display: inline-block;
+  display: flex;
+  padding-top: 5px;
+  flex: 1;
+}
+
+.cover_control_list a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  height: 60px;
+  flex: 1;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  counter-increment: cover_control_counter;
+}
+
+.cover_control_list a:before {
+  content: "0"counter(cover_control_counter);
+  color: rgba(255,255,255,.45);
+  position: relative;
+  right: 10px;
+}
+
+/* content */
+.content_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  height: 140px;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding: 16px;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d6d6d6+0,ffffff+100 */
+  background: #d6d6d6; /* Old browsers */
+  background: -moz-linear-gradient(top,  #d6d6d6 0%, #ffffff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #d6d6d6 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #d6d6d6 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.content_cards {
+  display: flex;  
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.content_card {
+  margin: 16px;
+  padding: 32px;
+  text-decoration: none;
+  box-shadow: 1px 1px 6px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content_card h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333;
+}
+
+.content_card p {
+  font-size: 12px;
+  color: #3569a4;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: .5px;
+  margin-top: auto;
+}
+
+/* footer */
+.footer {
+  background-color: #0b0b0b;
+  margin-top: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_footer {
+  height: 13px;
+  display: block;
+  border-right: 1px solid #555;
+  padding-right: 5px;
+  margin-right: 16px;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 8px;
+}
+
+.copy {
+  color: #666666;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
